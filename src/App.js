@@ -6,10 +6,12 @@ import Models from './views/ModelsPage/Models';
 import Testimonials from './views/TestimonialsPage/Testimonials';
 import Team from './views/TeamPage/Team';
 import Contact from './views/ContactPage/Contact';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="About" element={<About />} />

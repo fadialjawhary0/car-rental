@@ -1,0 +1,79 @@
+@use '../../styles/global/' as *;
+
+.navbar {
+  max-width: 133rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.7rem 2rem;
+  margin: 0 auto;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  &-logo {
+    width: 14.6rem;
+  }
+
+  &-links {
+    display: flex;
+    gap: 2.1rem;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &-link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: $text-black;
+    font-weight: 500;
+    font-family: $text-font;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $text-orange;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    gap: 2.5rem;
+    font-size: $p-size;
+    font-family: $text-font;
+    font-weight: 500;
+    align-items: center;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+
+    &-signin {
+      color: $text-black;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $text-orange;
+      }
+    }
+
+    &-register {
+      background-color: $text-orange;
+      color: white;
+      padding: 1.5rem 3rem;
+      border-radius: 0.3rem;
+      box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover {
+        box-shadow: 0 10px 15px 0 rgb(255 83 48 / 50%);
+      }
+    }
+  }
+}

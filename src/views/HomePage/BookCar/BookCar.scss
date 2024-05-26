@@ -1,0 +1,48 @@
+@use '../../../styles/global/' as *;
+
+.book-section {
+  background-color: $bg-gray;
+  padding: 13rem 0 14rem 0;
+}
+
+.book-content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: $bg-white;
+  height: 36rem;
+  padding: 4rem 6rem;
+  position: relative;
+  z-index: 4;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+  background-image: url('../../../assets/book-car/book-bg.png');
+
+  h3 {
+    font-size: $h3-size;
+  }
+
+  &-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &_type {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex-basis: 33%;
+      flex-grow: 33%;
+
+      label {
+        display: flex;
+        font-size: $p-size;
+        font-weight: 600;
+
+        b {
+          color: $text-orange;
+        }
+      }
+    }
+  }
+}
