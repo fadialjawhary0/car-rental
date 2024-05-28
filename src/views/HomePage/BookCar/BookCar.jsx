@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   IconCalendarEvent,
@@ -14,7 +15,8 @@ import CarToyota from '../../../assets/book-car/toyotacamry.jpg';
 import CarBmw from '../../../assets/book-car/bmw320.jpg';
 import CarMercedes from '../../../assets/book-car/benz.jpg';
 import CarPassat from '../../../assets/book-car/passatcc.jpg';
-import { Link } from 'react-router-dom';
+
+// import { ValidationHelper } from '../../../helper/validators';
 
 const BookCar = () => {
   const [bookCar, setBookCar] = useState({
@@ -25,12 +27,31 @@ const BookCar = () => {
     dropOffDate: '',
   });
 
+  const [personalInfo, setPersonalInfo] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    age: '',
+    email: '',
+    address: '',
+    city: '',
+    zipCode: '',
+  });
+
   const [isValidInputs, setIsValidInputs] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [selectedCarUrl, setSelectedCarUrl] = useState('');
+  const [bookSubmitted, setBookSubmitted] = useState(false);
 
   const handleInputChange = (field, value) => {
     setBookCar(prevState => ({
+      ...prevState,
+      [field]: value,
+    }));
+  };
+
+  const handlePersonalInfoChange = (field, value) => {
+    setPersonalInfo(prevState => ({
       ...prevState,
       [field]: value,
     }));
@@ -89,6 +110,22 @@ const BookCar = () => {
 
   const handleCarBooking = e => {
     e.preventDefault();
+
+    // const isValid =
+    //   personalInfo?.firstName &&
+    //   personalInfo?.lastName &&
+    //   personalInfo?.email &&
+    //   ValidationHelper?.isEmail(personalInfo?.email) &&
+    //   personalInfo?.age &&
+    //   ValidationHelper?.isAge(personalInfo?.age) &&
+    //   personalInfo?.phone &&
+    //   ValidationHelper?.isPhoneNumbere(personalInfo?.phone) &&
+    //   personalInfo?.address &&
+    //   personalInfo?.zipCode &&
+    //   personalInfo?.city;
+
+    setBookSubmitted(true);
+    setShowPopup(false);
   };
 
   useEffect(() => {
@@ -108,6 +145,15 @@ const BookCar = () => {
           {!isValidInputs ? (
             <div className='error-container'>
               <p>All fields are required!</p>
+              <IconX className='close-icon' onClick={closeValidationMessage} />
+            </div>
+          ) : (
+            <></>
+          )}
+
+          {bookSubmitted ? (
+            <div className='book-confirmation'>
+              <p>Check your email to confirm an order.</p>
               <IconX className='close-icon' onClick={closeValidationMessage} />
             </div>
           ) : (
@@ -197,6 +243,7 @@ const BookCar = () => {
         </div>
       </div>
 
+      {/* Show popup */}
       {showPopup && (
         <div className='popup-overlay'>
           <div className='popup'>
@@ -215,6 +262,7 @@ const BookCar = () => {
               </p>
             </div>
 
+            {/* Car information */}
             <div className='popup_car-info'>
               <div className='dates-div'>
                 <div className='popup_car-info_dates'>
@@ -282,28 +330,52 @@ const BookCar = () => {
                     <label>
                       First Name <span>*</span>
                     </label>
-                    <input type='text' placeholder='Enter your first name' />
+                    <input
+                      type='text'
+                      placeholder='Enter your first name'
+                      onChange={e =>
+                        handlePersonalInfoChange('firstName', e?.traget?.value)
+                      }
+                    />
                     <p>This field is required.</p>
                   </div>
                   <div className='booking-modal_personal-info-container_field'>
                     <label>
                       Last Name <span>*</span>
                     </label>
-                    <input type='text' placeholder='Enter your last name' />
+                    <input
+                      type='text'
+                      placeholder='Enter your last name'
+                      onChange={e =>
+                        handlePersonalInfoChange('lastName', e?.traget?.value)
+                      }
+                    />
                     <p>This field is required.</p>
                   </div>
                   <div className='booking-modal_personal-info-container_field'>
                     <label>
                       Phone Number <span>*</span>
                     </label>
-                    <input type='text' placeholder='Enter your phone number' />
+                    <input
+                      type='text'
+                      placeholder='Enter your phone number'
+                      onChange={e =>
+                        handlePersonalInfoChange('phone', e?.traget?.value)
+                      }
+                    />
                     <p>This field is required.</p>
                   </div>
                   <div className='booking-modal_personal-info-container_field'>
                     <label>
                       Age <span>*</span>
                     </label>
-                    <input type='text' placeholder='18' />
+                    <input
+                      type='text'
+                      placeholder='18'
+                      onChange={e =>
+                        handlePersonalInfoChange('age', e?.traget?.value)
+                      }
+                    />
                     <p>This field is required.</p>
                   </div>
                 </div>
@@ -313,7 +385,13 @@ const BookCar = () => {
                     <label>
                       Email <span>*</span>
                     </label>
-                    <input type='text' placeholder='Enter your email address' />
+                    <input
+                      type='text'
+                      placeholder='Enter your email address'
+                      onChange={e =>
+                        handlePersonalInfoChange('email', e?.traget?.value)
+                      }
+                    />
                     <p>This field is required.</p>
                   </div>
                   <div className='booking-modal_personal-info-container2_field'>
@@ -323,6 +401,9 @@ const BookCar = () => {
                     <input
                       type='text'
                       placeholder='Enter your street address'
+                      onChange={e =>
+                        handlePersonalInfoChange('address', e?.traget?.value)
+                      }
                     />
                     <p>This field is required.</p>
                   </div>
@@ -333,14 +414,26 @@ const BookCar = () => {
                     <label>
                       City <span>*</span>
                     </label>
-                    <input type='text' placeholder='Enter your city' />
+                    <input
+                      type='text'
+                      placeholder='Enter your city'
+                      onChange={e =>
+                        handlePersonalInfoChange('city', e?.traget?.value)
+                      }
+                    />
                     <p>This field is required.</p>
                   </div>
                   <div className='booking-modal_personal-info-container3_field'>
                     <label>
                       Zip Code <span>*</span>
                     </label>
-                    <input type='text' placeholder='Enter your zip code' />
+                    <input
+                      type='text'
+                      placeholder='Enter your zip code'
+                      onChange={e =>
+                        handlePersonalInfoChange('zipCode', e?.traget?.value)
+                      }
+                    />
                     <p>This field is required.</p>
                   </div>
                 </div>
@@ -351,6 +444,7 @@ const BookCar = () => {
                 </div>
               </form>
             </div>
+            {/* Submit button */}
             <div className='submit-container'>
               <Link
                 className='submit-btn'

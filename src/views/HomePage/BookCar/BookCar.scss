@@ -115,18 +115,25 @@
     cursor: pointer;
   }
 }
-::-webkit-scrollbar {
-  width: 0.7rem;
-}
 
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 2px grey;
-  border-radius: 1rem;
-}
+.book-confirmation {
+  display: flex;
+  justify-content: space-between;
+  background-color: #c3fabe;
+  border-radius: 0.75rem;
+  padding: 1rem 1.4rem;
 
-::-webkit-scrollbar-thumb {
-  background: $text-orange;
-  border-radius: 1rem;
+  p {
+    font-size: $p-size;
+    font-weight: 500;
+    color: #2a6817;
+  }
+
+  .close-icon {
+    color: #2a6817;
+    width: 2rem;
+    cursor: pointer;
+  }
 }
 
 .popup-overlay {
