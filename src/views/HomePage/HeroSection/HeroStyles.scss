@@ -6,8 +6,13 @@
   padding-bottom: 10rem;
 
   @media (max-width: 800px) {
-    padding-top: 23rem;
-    padding-bottom: 16rem;
+    padding-top: 18rem;
+    padding-bottom: 0rem;
+  }
+
+  @media (max-width: 450px) {
+    padding-top: 11rem;
+    padding-bottom: 0rem;
   }
 }
 
@@ -71,6 +76,12 @@
         justify-content: center;
       }
 
+      @media (max-width: 450px) {
+        flex-direction: column;
+        padding-left: 5rem;
+        padding-right: 5rem;
+      }
+
       &_book-ride {
         display: flex;
         align-items: center;
@@ -81,6 +92,10 @@
         box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
         text-decoration: none;
         transition: all 0.3s;
+
+        @media (max-width: 450px) {
+          justify-content: center;
+        }
 
         &:hover {
           box-shadow: 0 10px 15px 0 rgb(255 83 48 / 50%);
@@ -97,6 +112,10 @@
         text-decoration: none;
         transition: all 0.3s;
         border: 2px solid black;
+
+        @media (max-width: 450px) {
+          justify-content: center;
+        }
 
         &:hover {
           background-color: #ffffff;

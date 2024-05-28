@@ -1,8 +1,8 @@
 @use '../../../styles/global/' as *;
 
 .book-section {
-  background-color: $bg-gray;
-  padding: 13rem 0 14rem 0;
+  background: linear-gradient(180deg, #f8f8f8 20%, #fff 80%);
+  padding: 13rem 0 12rem 0;
 }
 
 .book-content-box {

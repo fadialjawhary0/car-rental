@@ -11,7 +11,12 @@ const HeroSection = () => {
   return (
     <section className='hero-section'>
       <div className='container'>
-        <img className='hero-bg' src={HeroBg} alt='hero background' />
+        <img
+          className='hero-bg'
+          src={HeroBg}
+          alt='hero background'
+          draggable={false}
+        />
         <div className='hero-content'>
           <div className='hero-content-text'>
             <h4>Plan your trip now</h4>
@@ -31,7 +36,12 @@ const HeroSection = () => {
               </Link>
             </div>
           </div>
-          <img src={HeroCar} alt='Hero car' className='hero-content_car-img' />
+          <img
+            src={HeroCar}
+            alt='Hero car'
+            className='hero-content_car-img'
+            draggable={false}
+          />
         </div>
       </div>
     </section>
