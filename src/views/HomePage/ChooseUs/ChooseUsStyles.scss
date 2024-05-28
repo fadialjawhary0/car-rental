@@ -1,0 +1,125 @@
+@use '../../../styles/global/' as *;
+
+.choose-section {
+  background-image: url('../../../assets/chooseUs/bg.png');
+  background-position: -225px 255px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 12rem;
+}
+
+.choose-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: #ffffff00;
+
+  &_img {
+    height: auto;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .text-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 5.5rem;
+    }
+
+    &_left {
+      display: flex;
+      flex-direction: column;
+      max-width: 50rem;
+
+      @media (max-width: 1000px) {
+        align-items: center;
+      }
+
+      h4 {
+        font-size: $h4-size;
+        font-weight: 600;
+        font-family: $text-font;
+        margin-bottom: 0.7rem;
+      }
+      h2 {
+        font-size: $h2-size;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: $p-size;
+        font-family: $text-font;
+        color: #706f7b;
+        line-height: 1.5;
+        margin-bottom: 3.3rem;
+      }
+
+      .find-details-btn {
+        color: #fff;
+        background-color: #ff4d30;
+        border-radius: 0.4rem;
+        box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding: 1.65rem 2.65rem;
+        text-decoration: none;
+        transition: all 0.3s;
+        width: fit-content;
+
+        &:hover {
+          box-shadow: 0 10px 15px 0 rgb(255 83 48 / 60%);
+          background-color: #fa4226;
+        }
+      }
+    }
+
+    &_right {
+      display: flex;
+      flex-direction: column;
+      gap: 4.5rem;
+      max-width: 44rem;
+
+      &_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        @media (max-width: 1000px) {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        img {
+          height: 11rem;
+          width: 11rem;
+        }
+
+        &_text {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          h4 {
+            font-size: 2.4rem;
+          }
+          p {
+            font-size: $p-size;
+            font-family: $text-font;
+            color: #706f7b;
+            line-height: 1.3;
+          }
+        }
+      }
+    }
+  }
+}

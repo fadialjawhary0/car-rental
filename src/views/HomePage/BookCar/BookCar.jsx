@@ -137,7 +137,7 @@ const BookCar = () => {
   }, [showPopup]);
 
   return (
-    <section className='book-section'>
+    <section id='booking-section' className='book-section'>
       <div className='container'>
         <div className='book-content-box'>
           <h3>Book a car</h3>

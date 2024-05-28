@@ -8,8 +8,14 @@ import HeroBg from '../../../assets/hero/hero-bg.png';
 import HeroCar from '../../../assets/hero/main-car.png';
 
 const HeroSection = () => {
+  const bookBtn = () => {
+    document
+      .querySelector('#booking-section')
+      .scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className='hero-section'>
+    <section id='hero-section' className='hero-section'>
       <div className='container'>
         <img
           className='hero-bg'
@@ -28,7 +34,10 @@ const HeroSection = () => {
               flexible pick-up options and much more.
             </p>
             <div className='hero-content-text_buttons'>
-              <Link className='hero-content-text_buttons_book-ride'>
+              <Link
+                className='hero-content-text_buttons_book-ride'
+                onClick={bookBtn}
+                to='/'>
                 Book Ride &nbsp; <IconCircleCheck />
               </Link>
               <Link className='hero-content-text_buttons_learn-more'>
