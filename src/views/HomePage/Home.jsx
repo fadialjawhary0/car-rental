@@ -1,22 +1,28 @@
 import React from 'react';
 
-import HeroSection from './HeroSection/HeroSection';
+import Hero from './Hero/Hero';
 import BookCar from './BookCar/BookCar';
 import PlanTrip from './PlanTrip/PlanTrip';
 import PickCar from './PickCar/PickCar';
 import Banner from './Banner/Banner';
 import ChooseUs from './ChooseUs/ChooseUs';
+import Testimonials from './Testimonials/Testimonials';
+import Faq from './Faq/Faq';
+import Download from './Download/Download';
 
 const Home = () => {
   return (
-    <div style={{ paddingBottom: '50rem' }}>
-      <HeroSection />
+    <>
+      <Hero />
       <BookCar />
       <PlanTrip />
       <PickCar />
       <Banner />
       <ChooseUs />
-    </div>
+      <Testimonials />
+      <Faq />
+      <Download />
+    </>
   );
 };
 

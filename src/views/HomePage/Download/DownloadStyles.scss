@@ -1,0 +1,63 @@
+@use '../../../styles/global/' as *;
+
+.download-section {
+  background-image: url('../../../assets/banners/bg02.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bg-gray;
+  padding: 10rem 0;
+
+  @media (max-width: 700px) {
+    background-image: none;
+  }
+}
+
+.download-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 55rem;
+  text-align: left;
+
+  @media (max-width: 700px) {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  h2 {
+    color: $text-black;
+    font-size: $h2-size;
+  }
+
+  p {
+    color: $text-gray;
+    font-family: $text-font;
+    font-size: $p-size;
+    line-height: 1.5;
+  }
+
+  &_buttons {
+    display: flex;
+    gap: 3rem;
+    padding-top: 2rem;
+
+    @media (max-width: 700px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 550px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      width: 40%;
+      cursor: pointer;
+
+      @media (max-width: 550px) {
+        width: 22rem;
+      }
+    }
+  }
+}

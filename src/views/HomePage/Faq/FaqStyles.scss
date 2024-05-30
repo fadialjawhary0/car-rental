@@ -1,0 +1,65 @@
+@use '../../../styles/global/' as *;
+
+.faq-section {
+  background-image: url('../../../assets/faq/car.png');
+  background-position: 0 70%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0;
+
+  &_title {
+    text-align: center;
+    padding-bottom: 8rem;
+    max-width: 75rem;
+
+    @media (max-width: 900px) {
+      padding-bottom: 7rem;
+    }
+
+    h4 {
+      font-size: $h4-size;
+    }
+    h2 {
+      font-size: $h2-size;
+      margin-bottom: 1.4rem;
+    }
+    p {
+      font-size: $p-size;
+      color: $text-gray;
+    }
+  }
+
+  .faq-box {
+    max-width: 80rem;
+    background-color: #fff;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &_question {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.8rem 4.5rem;
+
+      p {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+    }
+
+    &_answer {
+      color: #706f7b;
+      font-family: Rubik, sans-serif;
+      font-size: 1.6rem;
+      line-height: 1.7;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 4.5rem;
+    }
+  }
+}

@@ -7,19 +7,21 @@ import Testimonials from './views/TestimonialsPage/Testimonials';
 import Team from './views/TeamPage/Team';
 import Contact from './views/ContactPage/Contact';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="About" element={<About />} />
-        <Route path="Models" element={<Models />} />
-        <Route path="Testimonials" element={<Testimonials />} />
-        <Route path="Team" element={<Team />} />
-        <Route path="Contact" element={<Contact />} />
+        <Route index path='/' element={<Home />} />
+        <Route path='About' element={<About />} />
+        <Route path='Models' element={<Models />} />
+        <Route path='Testimonials' element={<Testimonials />} />
+        <Route path='Team' element={<Team />} />
+        <Route path='Contact' element={<Contact />} />
       </Routes>
+      <Footer />
     </>
   );
 }

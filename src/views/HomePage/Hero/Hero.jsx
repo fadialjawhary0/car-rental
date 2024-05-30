@@ -1,13 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { IconChevronRight, IconCircleCheck } from '@tabler/icons-react';
+import {
+  IconChevronRight,
+  IconChevronUp,
+  IconCircleCheck,
+} from '@tabler/icons-react';
 
 import './HeroStyles.scss';
 import HeroBg from '../../../assets/hero/hero-bg.png';
 import HeroCar from '../../../assets/hero/main-car.png';
 
 const HeroSection = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  const checkScrollTop = () => {
+    if (!showScroll && window.pageYOffset > 400) {
+      setShowScroll(true);
+    } else if (showScroll && window.pageYOffset <= 400) {
+      setShowScroll(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  /* eslint-disable react-hooks/exhaustive-deps */
+  useEffect(() => {
+    window.addEventListener('scroll', checkScrollTop);
+    return () => {
+      window.removeEventListener('scroll', checkScrollTop);
+    };
+  }, [showScroll]);
+  /* eslint-enable react-hooks/exhaustive-deps */
+
   const bookBtn = () => {
     document
       .querySelector('#booking-section')
@@ -52,6 +79,11 @@ const HeroSection = () => {
             draggable={false}
           />
         </div>
+      </div>
+      <div
+        className={`scroll-up ${showScroll ? 'show' : ''}`}
+        onClick={scrollToTop}>
+        <IconChevronUp />
       </div>
     </section>
   );
