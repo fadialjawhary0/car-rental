@@ -1,8 +1,8 @@
 import React from 'react';
 
-import selectCarIcon from '../../../assets/plan/icon1.png';
-import operatorIcon from '../../../assets/plan/icon2.png';
-import driveIcon from '../../../assets/plan/icon3.png';
+import selectCarIcon from '../../assets/plan/icon1.png';
+import operatorIcon from '../../assets/plan/icon2.png';
+import driveIcon from '../../assets/plan/icon3.png';
 
 import './PlanTripStyles.scss';
 

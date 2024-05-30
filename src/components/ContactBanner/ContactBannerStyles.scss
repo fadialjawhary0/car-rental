@@ -1,0 +1,47 @@
+@use '../../styles/global/' as *;
+
+.contact-banner {
+  width: 100%;
+  height: 20rem;
+  background-image: url('../../assets/banners/book-banner.png');
+  margin-top: 6rem;
+  position: relative;
+
+  &_overlay {
+    background-color: #2d2d2d;
+    height: 100%;
+    opacity: 0.89;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.banner-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  gap: 5rem;
+  position: relative;
+
+  h2 {
+    font-size: 3.2rem;
+    color: #fff;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    color: $text-orange;
+    font-size: 2.7rem;
+    gap: 1rem;
+    white-space: nowrap;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

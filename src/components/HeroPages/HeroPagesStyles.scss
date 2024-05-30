@@ -1,0 +1,40 @@
+@use '../../styles/global/' as *;
+
+.hero-pages {
+  background-image: url('../../assets/hero/heroes-bg.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 41rem;
+  position: relative;
+
+  &_overlay {
+    background-color: hsla(0, 0%, 100%, 0.92);
+    height: 100%;
+  }
+
+  h3 {
+    position: absolute;
+    top: 16.25rem;
+    left: 31.5rem;
+    font-size: 3.6rem;
+  }
+
+  p {
+    position: absolute;
+    top: 22.25rem;
+    left: 31.5rem;
+    font-size: $p-size;
+    font-weight: 600;
+
+    a {
+      color: $text-black;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $text-orange;
+      }
+    }
+  }
+}

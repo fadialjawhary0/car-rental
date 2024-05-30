@@ -2,7 +2,7 @@ import React from 'react';
 
 import Hero from './Hero/Hero';
 import BookCar from './BookCar/BookCar';
-import PlanTrip from './PlanTrip/PlanTrip';
+import PlanTrip from '../../components/PlanTrip/PlanTrip';
 import PickCar from './PickCar/PickCar';
 import Banner from './Banner/Banner';
 import ChooseUs from './ChooseUs/ChooseUs';

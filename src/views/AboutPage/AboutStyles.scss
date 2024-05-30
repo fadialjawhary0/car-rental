@@ -1,0 +1,71 @@
+@use '../../styles/global/' as *;
+
+.about-main {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding: 10rem 0;
+  max-width: 90rem;
+  margin: 0 auto;
+
+  &_img {
+    width: 43rem;
+    height: 43rem;
+  }
+
+  &_text {
+    h3 {
+      font-size: 2.2rem;
+      font-family: $text-font;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 4.2rem;
+      line-height: 1.2;
+    }
+    &_paragraph {
+      color: $text-gray;
+      font-size: $p-size;
+      font-family: $text-font;
+      padding: 2rem 0 4rem 0;
+      line-height: 1.5;
+    }
+
+    &_icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+
+      &_box {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          width: 7rem;
+        }
+
+        .last-icon {
+          width: 5rem;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+
+          h4 {
+            font-size: 4.6rem;
+          }
+          p {
+            color: $text-gray;
+            font-family: $text-font;
+            font-size: $p-size;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+}
