@@ -6,7 +6,7 @@ import PlanTrip from '../../components/PlanTrip/PlanTrip';
 import PickCar from './PickCar/PickCar';
 import Banner from './Banner/Banner';
 import ChooseUs from './ChooseUs/ChooseUs';
-import Testimonials from './Testimonials/Testimonials';
+import Testimonials from '../../components/Testimonials/Testimonials';
 import Faq from './Faq/Faq';
 import Download from './Download/Download';
 

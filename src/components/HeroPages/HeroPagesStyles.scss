@@ -7,33 +7,41 @@
   background-size: cover;
   height: 41rem;
   position: relative;
+  width: 100%;
 
   &_overlay {
-    background-color: hsla(0, 0%, 100%, 0.92);
+    width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 100%, 0.92);
   }
 
-  h3 {
-    position: absolute;
-    top: 16.25rem;
-    left: 31.5rem;
-    font-size: 3.6rem;
-  }
+  &_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 41rem;
+    z-index: 100;
+    h3 {
+      font-size: 3.6rem;
+    }
 
-  p {
-    position: absolute;
-    top: 22.25rem;
-    left: 31.5rem;
-    font-size: $p-size;
-    font-weight: 600;
+    p {
+      font-size: $p-size;
+      font-weight: 600;
 
-    a {
-      color: $text-black;
-      text-decoration: none;
-      transition: all 0.3s;
+      a {
+        color: $text-black;
+        text-decoration: none;
+        transition: all 0.3s;
 
-      &:hover {
-        color: $text-orange;
+        &:hover {
+          color: $text-orange;
+        }
       }
     }
   }

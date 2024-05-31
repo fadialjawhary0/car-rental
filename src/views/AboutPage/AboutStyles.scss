@@ -8,15 +8,24 @@
   max-width: 90rem;
   margin: 0 auto;
 
+  @media (width <= 960px) {
+    flex-direction: column;
+    max-width: 49rem;
+  }
+
   &_img {
     width: 43rem;
     height: 43rem;
   }
 
   &_text {
+    @media (width <= 960px) {
+      text-align: center;
+    }
     h3 {
       font-size: 2.2rem;
       font-family: $text-font;
+      font-weight: 500;
       margin-bottom: 1rem;
     }
     h2 {
@@ -37,9 +46,17 @@
       align-items: center;
       gap: 4rem;
 
+      @media (width <= 520px) {
+        flex-direction: column;
+      }
+
       &_box {
         display: flex;
         flex-direction: column;
+
+        @media (width <= 520px) {
+          align-items: center;
+        }
 
         img {
           width: 7rem;
@@ -54,6 +71,10 @@
           align-items: center;
           gap: 1rem;
           margin-bottom: 1rem;
+
+          @media (width <= 520px) {
+            flex-direction: column;
+          }
 
           h4 {
             font-size: 4.6rem;

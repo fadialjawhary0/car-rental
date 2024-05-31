@@ -26,6 +26,12 @@
   gap: 5rem;
   position: relative;
 
+  @media (width<=750px) {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
   h2 {
     font-size: 3.2rem;
     color: #fff;

@@ -1,5 +1,5 @@
-import johnImg from '../../../../assets/testimonials/john-doe.jpg';
-import janeImg from '../../../../assets/testimonials/jane-doe.jpg';
+import johnImg from '../../../assets/testimonials/john-doe.jpg';
+import janeImg from '../../../assets/testimonials/jane-doe.jpg';
 
 export const TestimonialsService = [
   {

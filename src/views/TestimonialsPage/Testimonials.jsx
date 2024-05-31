@@ -1,7 +1,17 @@
 import React from 'react';
 
-const Testimonials = () => {
-  return <div>Testimonials</div>;
+import HeroPages from '../../components/HeroPages/HeroPages';
+import Testimonials from '../../components/Testimonials/Testimonials';
+import ContactBanner from '../../components/ContactBanner/ContactBannerStyles';
+
+const TestimonialsPage = () => {
+  return (
+    <div className='testimonials-page'>
+      <HeroPages pageName='Testimonials' />
+      <Testimonials />
+      <ContactBanner />
+    </div>
+  );
 };
 
-export default Testimonials;
+export default TestimonialsPage;
