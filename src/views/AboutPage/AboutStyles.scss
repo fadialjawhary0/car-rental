@@ -16,6 +16,11 @@
   &_img {
     width: 43rem;
     height: 43rem;
+
+    @media (width<= 800px) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &_text {

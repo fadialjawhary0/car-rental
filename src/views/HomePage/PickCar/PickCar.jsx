@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import CarInfo from './CarInfo';
-import { DATA } from './CarData';
+import { CarService } from './services/CarService';
 
 import './PickCarStyles.scss';
 
@@ -88,12 +88,16 @@ function PickCar() {
                 </button>
               </div>
 
-              {active === 'FirstCar' && <CarInfo data={DATA} carID={0} />}
-              {active === 'SecondCar' && <CarInfo data={DATA} carID={1} />}
-              {active === 'ThirdCar' && <CarInfo data={DATA} carID={2} />}
-              {active === 'FourthCar' && <CarInfo data={DATA} carID={3} />}
-              {active === 'FifthCar' && <CarInfo data={DATA} carID={4} />}
-              {active === 'SixthCar' && <CarInfo data={DATA} carID={5} />}
+              {active === 'FirstCar' && <CarInfo data={CarService} carID={0} />}
+              {active === 'SecondCar' && (
+                <CarInfo data={CarService} carID={1} />
+              )}
+              {active === 'ThirdCar' && <CarInfo data={CarService} carID={2} />}
+              {active === 'FourthCar' && (
+                <CarInfo data={CarService} carID={3} />
+              )}
+              {active === 'FifthCar' && <CarInfo data={CarService} carID={4} />}
+              {active === 'SixthCar' && <CarInfo data={CarService} carID={5} />}
             </div>
           </div>
         </div>

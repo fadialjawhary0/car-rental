@@ -104,6 +104,10 @@ const BookCar = () => {
     setIsValidInputs(true);
   };
 
+  const closeCofirmMessage = () => {
+    setBookSubmitted(false);
+  };
+
   const closePopup = () => {
     setShowPopup(false);
   };
@@ -154,7 +158,7 @@ const BookCar = () => {
           {bookSubmitted ? (
             <div className='book-confirmation'>
               <p>Check your email to confirm an order.</p>
-              <IconX className='close-icon' onClick={closeValidationMessage} />
+              <IconX className='close-icon' onClick={closeCofirmMessage} />
             </div>
           ) : (
             <></>

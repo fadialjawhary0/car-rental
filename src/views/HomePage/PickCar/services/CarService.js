@@ -1,11 +1,11 @@
-import Golf6 from '../../../assets/book-car/golf6.jpg';
-import AudiA1 from '../../../assets/book-car/audia1.jpg';
-import Toyota from '../../../assets/book-car/toyotacamry.jpg';
-import Bmw320 from '../../../assets/book-car/bmw320.jpg';
-import Benz from '../../../assets/book-car/benz.jpg';
-import Passat from '../../../assets/book-car/passatcc.jpg';
+import Golf6 from '../../../../assets/book-car/golf6.jpg';
+import AudiA1 from '../../../../assets/book-car/audia1.jpg';
+import Toyota from '../../../../assets/book-car/toyotacamry.jpg';
+import Bmw320 from '../../../../assets/book-car/bmw320.jpg';
+import Benz from '../../../../assets/book-car/benz.jpg';
+import Passat from '../../../../assets/book-car/passatcc.jpg';
 
-export const DATA = [
+export const CarService = [
   [
     {
       name: 'VW Golf 6',

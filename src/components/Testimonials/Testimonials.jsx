@@ -22,7 +22,7 @@ const Testimonials = () => {
 
           <div className='testimonials-box'>
             {TestimonialsService.map(testimonial => (
-              <div id={testimonial?.id} className='testimonial-card'>
+              <div key={testimonial?.id} className='testimonial-card'>
                 <p>"{testimonial?.quote}"</p>
                 <div className='testimonial-card_author'>
                   <div className='testimonial-card_author_info'>
@@ -43,10 +43,10 @@ const Testimonials = () => {
                     viewBox='0 0 24 24'
                     fill='none'
                     stroke='#ff4d30'
-                    stroke-width='2'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    class='tabler-icon tabler-icon-quote'>
+                    strokeWidth='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    className='tabler-icon tabler-icon-quote'>
                     <path d='M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5'></path>
                     <path d='M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5'></path>
                   </svg>

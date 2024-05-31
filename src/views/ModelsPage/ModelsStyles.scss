@@ -1,0 +1,25 @@
+@use '../../styles/global/' as *;
+
+.models-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.models-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 3rem;
+  width: 112rem;
+  padding: 10rem 0;
+
+  @media (width <= 1150px) {
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+  }
+
+  @media (width <= 800px) {
+    grid-template-columns: 1fr;
+    width: fit-content;
+  }
+}

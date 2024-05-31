@@ -1,13 +1,13 @@
 import React from 'react';
 
-import HeroPages from '../../components/HeroPages/HeroPages';
+import SharedHero from '../../components/SharedHero/SharedHero';
 import Testimonials from '../../components/Testimonials/Testimonials';
-import ContactBanner from '../../components/ContactBanner/ContactBannerStyles';
+import ContactBanner from '../../components/ContactBanner/ContactBanner';
 
 const TestimonialsPage = () => {
   return (
     <div className='testimonials-page'>
-      <HeroPages pageName='Testimonials' />
+      <SharedHero pageName='Testimonials' />
       <Testimonials />
       <ContactBanner />
     </div>

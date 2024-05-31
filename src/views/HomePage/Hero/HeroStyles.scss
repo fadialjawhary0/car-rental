@@ -2,7 +2,7 @@
 
 .hero-section {
   background-color: $bg-gray;
-  padding-top: 31rem;
+  padding-top: 38rem;
   padding-bottom: 10rem;
 
   @media (max-width: 800px) {
@@ -153,6 +153,7 @@
   transition: opacity 0.3s ease-out;
   opacity: 0;
   pointer-events: none;
+  z-index: 100;
 
   &.show {
     opacity: 1;

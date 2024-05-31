@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './HeroPagesStyles.scss';
+import './SharedHeroStyles.scss';
 
-const HeroPages = ({ pageName }) => {
+const SharedHero = ({ pageName }) => {
   return (
     <section className='hero-pages'>
       <div className='hero-pages_overlay'></div>
@@ -18,4 +18,4 @@ const HeroPages = ({ pageName }) => {
   );
 };
 
-export default HeroPages;
+export default SharedHero;

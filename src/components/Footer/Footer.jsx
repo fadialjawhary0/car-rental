@@ -42,6 +42,14 @@ const Footer = () => {
                   Design by XpeedStudio
                 </a>
               </li>
+              <li style={{ marginTop: '5px' }}>
+                <a
+                  style={{ fontSize: '14px' }}
+                  target='_blank'
+                  href='https://github.com/fadialjawhary0/car-rental'>
+                  Developed by Fadi Aljohari
+                </a>
+              </li>
             </ul>
 
             <ul className='footer-content__2'>

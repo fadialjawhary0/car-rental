@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HeroPages from '../../components/HeroPages/HeroPages';
+import SharedHero from '../../components/SharedHero/SharedHero';
 import PlanTrip from '../../components/PlanTrip/PlanTrip';
 
 import mainImg from '../../assets/about/about-main.jpg';
@@ -9,12 +9,12 @@ import icon2 from '../../assets/about/icon2.png';
 import icon3 from '../../assets/about/icon3.png';
 
 import './AboutStyles.scss';
-import ContactBanner from '../../components/ContactBanner/ContactBannerStyles';
+import ContactBanner from '../../components/ContactBanner/ContactBanner';
 
 const About = () => {
   return (
     <div className='about-page'>
-      <HeroPages pageName='About' />
+      <SharedHero pageName='About' />
       <div className='container'>
         <div className='about-main'>
           <img className='about-main_img' src={mainImg} alt='main' />
