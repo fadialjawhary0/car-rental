@@ -20,11 +20,7 @@ const ChooseUs = () => {
     <section className='choose-section'>
       <div className='container'>
         <div className='choose-container'>
-          <img
-            className='choose-container_img'
-            src={mainImg}
-            alt='Cars Image'
-          />
+          <img className='choose-container_img' src={mainImg} alt='Cars' />
           <div className='text-container'>
             <div className='text-container_left'>
               <h4>Why Choose Us</h4>

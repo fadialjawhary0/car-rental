@@ -109,7 +109,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     font-size: 1.4rem;
-    // font-family: $text-font;
 
     &__col {
       display: grid;
@@ -171,7 +170,6 @@
   color: white;
 }
 
-// spiner
 .loader {
   width: 48px;
   height: 48px;

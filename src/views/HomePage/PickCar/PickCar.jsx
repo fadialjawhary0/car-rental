@@ -35,6 +35,9 @@ function PickCar() {
               <div className='pick-box'>
                 <button
                   className={`${coloringButton('btn1')}`}
+                  style={{
+                    color: active === 'SecondCar' ? '#ffffff' : '#000000',
+                  }}
                   onClick={() => {
                     setActive('SecondCar');
                     btnID('btn1');
@@ -44,6 +47,9 @@ function PickCar() {
                 <button
                   className={`${coloringButton('btn2')}`}
                   id='btn2'
+                  style={{
+                    color: active === 'FirstCar' ? '#ffffff' : '#000000',
+                  }}
                   onClick={() => {
                     setActive('FirstCar');
                     btnID('btn2');
@@ -53,6 +59,9 @@ function PickCar() {
                 <button
                   className={`${coloringButton('btn3')}`}
                   id='btn3'
+                  style={{
+                    color: active === 'ThirdCar' ? '#ffffff' : '#000000',
+                  }}
                   onClick={() => {
                     setActive('ThirdCar');
                     btnID('btn3');
@@ -62,6 +71,9 @@ function PickCar() {
                 <button
                   className={`${coloringButton('btn4')}`}
                   id='btn4'
+                  style={{
+                    color: active === 'FourthCar' ? '#ffffff' : '#000000',
+                  }}
                   onClick={() => {
                     setActive('FourthCar');
                     btnID('btn4');
@@ -71,6 +83,9 @@ function PickCar() {
                 <button
                   className={`${coloringButton('btn5')}`}
                   id='btn5'
+                  style={{
+                    color: active === 'FifthCar' ? '#ffffff' : '#000000',
+                  }}
                   onClick={() => {
                     setActive('FifthCar');
                     btnID('btn5');
@@ -80,6 +95,9 @@ function PickCar() {
                 <button
                   className={`${coloringButton('btn6')}`}
                   id='btn6'
+                  style={{
+                    color: active === 'SixthCar' ? '#ffffff' : '#000000',
+                  }}
                   onClick={() => {
                     setActive('SixthCar');
                     btnID('btn6');

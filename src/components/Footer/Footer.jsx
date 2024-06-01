@@ -46,6 +46,7 @@ const Footer = () => {
                 <a
                   style={{ fontSize: '14px' }}
                   target='_blank'
+                  rel='noreferrer'
                   href='https://github.com/fadialjawhary0/car-rental'>
                   Developed by Fadi Aljohari
                 </a>
