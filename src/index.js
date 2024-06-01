@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './styles/global/global.scss';
+import { Analytics } from '@vercel/analytics/react';
 
 import { BrowserRouter } from 'react-router-dom';
 
