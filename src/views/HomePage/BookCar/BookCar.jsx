@@ -27,7 +27,6 @@ const BookCar = () => {
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
-  const xProgress = useTransform(scrollYProgress, [0, 1], ['-100%', '0%']);
 
   const [bookCar, setBookCar] = useState({
     carType: '',
