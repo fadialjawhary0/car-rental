@@ -1,5 +1,6 @@
-import { React, useEffect, useState } from 'react';
+import { React, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 import {
   IconCalendarEvent,
@@ -19,6 +20,15 @@ import CarPassat from '../../../assets/book-car/passatcc.jpg';
 // import { ValidationHelper } from '../../../helper/validators';
 
 const BookCar = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['0 1', '1.33 1'],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
+  const xProgress = useTransform(scrollYProgress, [0, 1], ['-100%', '0%']);
+
   const [bookCar, setBookCar] = useState({
     carType: '',
     pickUp: '',
@@ -143,7 +153,13 @@ const BookCar = () => {
   return (
     <section id='booking-section' className='book-section'>
       <div className='container'>
-        <div className='book-content-box'>
+        <motion.div
+          className='book-content-box'
+          ref={ref}
+          style={{
+            scale: scaleProgress,
+            opacity: opacityProgress,
+          }}>
           <h3>Book a car</h3>
 
           {!isValidInputs ? (
@@ -244,7 +260,7 @@ const BookCar = () => {
               Search
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
 
       {/* Show popup */}
